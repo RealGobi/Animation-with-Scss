@@ -1,13 +1,46 @@
 body {
     margin: 0;
-    background: indianred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .box {
-        text-align: center;
-        width: 100px;
-        height: 100px;
-        background: lawngreen;
-        perspective: 1000px;
-        transform-style: preserve-3d;
+    .container {
+        max-width: 800px;
+        border: 1px solid rosybrown;
+        overflow: hidden;
+
+        .slider {
+            background: tomato;
+            display: flex;
+
+            .img {
+                flex: 1;
+                background: darkcyan;
+                
+                img {
+                    width: 100%;
+                
+                }
+            }
+        }
+    }
+    footer {
+        max-width:800px;
+        width: 100%;
+        background: gold;
+        display: flex;
+
+        a {
+            flex:1;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 2rem;
+            
+            &:hover {
+                background: red;
+            }
+        }
     }
 }

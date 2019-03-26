@@ -1,50 +1,42 @@
-document.querySelector('.box').addEventListener('click', (e)=>{
+let conterinerWidth = document.querySelector('.container').offsetWidth;
+let numOfImg = document.querySelector('.slider').childElementCount;
+let activeSlide = 0;
+let animationTime = 500;
+document.querySelector('.slider').style.width = `${conterinerWidth*numOfImg}px`;
 
-    let time = 4000;
+document.querySelector('#prev').addEventListener('click', () => {
+    // <-
+    if (activeSlide > 0) {
+               // föregående bild
+               activeSlide--
 
-    anime({
-            targets: e.target,
-            duration: 4000,
-            easing: 'easeInOutQuad',
-            width: [{
-                value: window.innerWidth,
-                duration: time/2
-            },
-             {
-                value: 100,
-                duration: time/2
-             }],
+               //animering med animeJS
+               anime({
+                   targets: '.slider',
+                   duration: animationTime,
+                   translateX: -(activeSlide * conterinerWidth),
+                   easing: 'easeInOutQuad'
+               })
+    }
+})
+document.querySelector('#next').addEventListener('click', () => {
+    // ->
+    // är jag på sista sliden?
+    if (activeSlide < numOfImg - 1) {
+        // näste bild
+        activeSlide++
 
-            height: [{
-                value: window.innerHeight,
-                duration: time/2
-            },
-            {
-                value:100,
-                duration: time/2
-            }],
-            backgroundColor: [
-                {
-                    value: '#481139',
-                    duration: time/2
-                },
-                {
-                    value: '#fff',
-                    duration: time/2
-                }
-            ],
-            rotateZ: [
-                {
-                    value: '360deg',
-                    duration: time/2
-                },
-                {
-                    value: '0deg',
-                    duration: time/2
-                }
-            ]
-    });
+        //animering med animeJS
+        anime({
+            targets: '.slider',
+            duration: animationTime,
+            translateX: -(activeSlide * conterinerWidth),
+            easing: 'easeInOutQuad'
+        })
 
-
+    } else {
+        
+        //gör nada
+    }
 
 })
