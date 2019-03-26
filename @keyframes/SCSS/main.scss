@@ -1,0 +1,36 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: forestgreen;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: 5;
+
+    &.box2 {
+        animation-delay:  1s;
+    }
+    &.box3 {
+        animation-delay:  3s;
+    }
+}
+
+@keyframes slide {
+    0% { 
+        background: forestgreen; 
+        transform: translate3d(0, 0, 0); 
+        border-radius: 0px;
+    }
+
+    100% { 
+        background: rebeccapurple; 
+        transform: translate3d(600px, 0, 0); 
+        border-radius: 50px;
+    }
+
+}
