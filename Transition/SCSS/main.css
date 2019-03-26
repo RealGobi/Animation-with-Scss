@@ -8,13 +8,17 @@ body .toggle {
   background: rgba(255, 0, 0, 0.2);
   border-radius: 999rem;
   padding: .3rem;
+  -webkit-transition: background .4s ease;
+  transition: background .4s ease;
 }
 
 body .toggle .dot {
   width: 1.5rem;
   height: 1.5rem;
-  background: rgba(255, 0, 0, 0.1);
+  background: rgba(255, 0, 0, 0.5);
   border-radius: inherit;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 body .toggle.on {
@@ -22,7 +26,7 @@ body .toggle.on {
 }
 
 body .toggle.on .dot {
-  background: rgba(0, 180, 0, 0.1);
-  margin-left: 2rem;
+  background: rgba(0, 180, 0, 0.5);
+  margin-left: 3.5rem;
 }
 /*# sourceMappingURL=main.css.map */
