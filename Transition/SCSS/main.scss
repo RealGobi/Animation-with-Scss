@@ -1,0 +1,28 @@
+body {
+    background: lightgray;
+
+    .toggle {
+        width: 5rem;
+        height: 1.5rem;
+        background: rgba(255,0,0,.2);
+        border-radius: 999rem;
+        padding: .3rem;
+
+        .dot {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: rgba(255,0,0,.1);
+            border-radius: inherit;
+        }
+
+        &.on {
+            background: rgba(0,180,0,.2);
+
+            .dot {
+                background: rgba(0,180,0,.1);
+                margin-left: 2rem;
+            }
+        }
+
+    }
+}
