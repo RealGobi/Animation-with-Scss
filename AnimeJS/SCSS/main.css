@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background: indianred;
+}
+
+body .box {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background: lawngreen;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+/*# sourceMappingURL=main.css.map */

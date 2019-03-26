@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    background: indianred;
+
+    .box {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        background: lawngreen;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+}
